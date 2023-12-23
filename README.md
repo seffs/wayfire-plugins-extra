@@ -9,7 +9,7 @@ Dependencies:
 `wayfire`, `wlroots`, `wf-config`, `cairo`, `giomm`
 
 ```
-git clone https://github.com/WayfireWM/wayfire-plugins-extra && cd wayfire-plugins-extra
+git clone https://github.com/seffs/wayfire-plugins-extra && cd wayfire-plugins-extra
 meson build --prefix=/usr --buildtype=release
 ninja -C build && sudo ninja -C build install
 ```
