@@ -15,5 +15,10 @@
             <default>2000</default>
             <min>250</min>
         </option>
+        <option name="start_hidden" type="bool">
+            <_short>Start with the cursor hidden</_short>
+            <_long>If disabled the cursor will start shown.</_long>
+            <default>false</default>
+        </option>
     </plugin>
 </wayfire>

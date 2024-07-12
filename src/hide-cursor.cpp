@@ -36,12 +36,14 @@ namespace wf_hide_cursor
     class wayfire_hide_cursor
     {
         wf::option_wrapper_t<int> hide_delay{"hide-cursor/hide_delay"};
+        wf::option_wrapper_t<bool> start_hidden{"hide-cursor/start_hidden"};
         wf::wl_timer hide_timer;
 
     public:
         wayfire_hide_cursor()
         {
-            hidden = false;
+            if (start_hidden) wf::get_core().hide_cursor();
+            hidden = start_hidden;
             setup_hide_timer();
             wf::get_core().connect_signal("pointer_motion", &pointer_motion);
         }
